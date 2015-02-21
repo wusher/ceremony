@@ -1,49 +1,55 @@
 ---
 downloads: ~/.ansible-downloads/
 homebrew_installed_packages:
-  - zsh
   - ack
-  - docker
+  - ansible
   - boot2docker
+  - docker
+  - fig
+  - git
   - go
+  - hr
+  - jq
+  - macvim
   - nvm
+  - postgresql
   - rbenv
+  - reattach-to-user-namespace
   - ruby-build
+  - sqlite
   - tmux
   - tree
   - watch
-  - macvim
-  - sqlite
-  - reattach-to-user-namespace
-  - hr
-  - git
-  - ansible
-  - fig
+  - zsh
 
 homebrew_taps:
   - caskroom/cask
 
 homebrew_cask_appdir: /Applications
 homebrew_cask_apps:
-  - alfred             
-  - dash               
-  - fluid              
-  - iterm2             
-  - nvalt              
-  - sequel-pro         
-  - slack              
-  - vlc
-  - evernote
-  - flux
-  - skitch
   - 1password
-  - amethyst           
-  - disk-inventory-x   
-  - google-chrome      
-  - macpaw-gemini      
-  - rdio               
-  - skype              
-  - virtualbox         
+  - alfred
+  - amethyst
+  - caffeine
+  - dash
+  - disk-inventory-x
+  - dropbox
+  - evernote
   - firefox
-  - ynab
+  - fluid
+  - flux
+  - github
+  - google-chrome
+  - iterm2
+  - kindle
+  - macpaw-gemini
   - macvim
+  - nvalt
+  - rdio
+  - sequel-pro
+  - skitch
+  - skype
+  - slack
+  - virtualbox
+  - vlc
+  - ynab

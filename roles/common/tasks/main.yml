@@ -1,5 +1,6 @@
 ---
   - include: preconditions.yml
+  - include: fonts.yml
   - include: dotfiles.yml
   - include: homebrew.yml
   - include: zsh.yml

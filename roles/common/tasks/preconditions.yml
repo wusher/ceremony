@@ -4,3 +4,11 @@
     path: "/Users/{{ username }}/setup"
     state: directory
     mode: 0755
+- name: Make sure that the setup directory exsists
+  file:
+    path: "{{staging_dir}}"
+    state: directory
+    mode: 0755
+- name: Staging directory contents
+  command: "ls {{staging_dir}}"
+  register: staging_dir_contents

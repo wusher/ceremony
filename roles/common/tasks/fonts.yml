@@ -1,0 +1,31 @@
+---
+- include_vars: fonts.yml
+- name: Installed ubuntu fonts
+  command: "ls /Library/Fonts"
+  register: installed_fonts
+- set_fact:
+    do_ubuntu_mono_install: "'ubuntu.zip' not in staging_dir_contents.stdout"
+- name: Download Ubuntu Mono Font
+  get_url:
+    url: "{{ubuntu_font}}"
+    dest: "{{staging_dir}}/ubuntu.zip"
+  when: do_ubuntu_mono_install
+- command: "rm -rf '{{staging_dir}}/ubuntu_fonts'"
+- name: Make sure that the setup directory exsists
+  file:
+    path: "{{staging_dir}}/ubuntu_fonts"
+    state: directory
+  when: do_ubuntu_mono_install
+- name: Prep Fonts
+  unarchive:
+    src: "{{staging_dir}}/ubuntu.zip"
+    dest: "{{staging_dir}}/ubuntu_fonts"
+  when: do_ubuntu_mono_install
+- name: Install Fonts
+  copy:
+    src: "{{item}}"
+    dest: "/Library/Fonts"
+  when: do_ubuntu_mono_install
+  with_fileglob:
+    - "{{staging_dir}}/ubuntu_fonts/*/*.ttf"
+

@@ -1,3 +1,4 @@
 ---
 username: maudite
 github_username: wusher
+staging_dir: "/Users/{{username}}/.staging_tmp"

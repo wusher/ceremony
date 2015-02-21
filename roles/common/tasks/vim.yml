@@ -14,9 +14,10 @@
     mode: 0755
 - name: Add pathogen to the repo
   get_url: url=https://raw.githubusercontent.com/tpope/vim-pathogen/master/autoload/pathogen.vim dest="/Users/{{ username }}/.vim/autoload/pathogen.vim"
-- name: Ensure dotfiles repository is cloned locally.
+- name: Ensure vim plug-ins are installed.
   git:
     repo: "https://github.com/{{ item.name }}.git"
     dest: "/Users/{{ username}}/.vim/bundle/{{ item.folder }}"
+    version: master
   sudo: no
   with_items: vim_submodules

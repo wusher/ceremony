@@ -1,11 +1,19 @@
 ---
 - include_vars: homebrew.yml
+- command: brew update
+
 - name: Ensure configured taps are tapped.
   homebrew_tap: "tap={{ item }} state=present"
   with_items: homebrew_taps
 
+- name: Get list of apps installed with cask.
+  command: brew list
+  register: homebrew_list
+  always_run: yes
+  changed_when: false
 - name: Ensure configured homebrew packages are installed.
   homebrew: "name={{ item }} state=present"
+  when: "'{{ item }}' not in homebrew_list.stdout"
   with_items: homebrew_installed_packages
 
 
@@ -21,9 +29,3 @@
     brew cask install {{ item }} --appdir={{ homebrew_cask_appdir }}
   with_items: homebrew_cask_apps
   when: "'{{ item }}' not in homebrew_cask_list.stdout"
-
-- name: Install configured cask applications.
-  command: >
-    brew cask link {{ item }} --appdir={{ homebrew_cask_appdir }}
-  with_items: homebrew_cask_apps
-  when: "'{{ item }}' in homebrew_cask_list.stdout"

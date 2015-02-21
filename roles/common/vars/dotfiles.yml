@@ -6,3 +6,6 @@ dotfiles_to_link:
   - tmux.conf
   - vimrc 
   - zshrc
+misc_config_files:
+  - dest: Library/Preferences/com.googlecode.iterm2.plist
+    src: iterm2.plist

@@ -10,4 +10,10 @@
     src: "/Users/{{username}}/.dot_files/{{item}}"
     state: link
   with_items: dotfiles_to_link
+- name: Misc Files
+  file: 
+    path: "/Users/{{username}}/{{item.dest}}"
+    src: "/Users/{{username}}/.dot_files/{{item.src}}"
+    state: link
+  with_items: misc_config_files
 

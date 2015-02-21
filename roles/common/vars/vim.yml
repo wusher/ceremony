@@ -1,0 +1,78 @@
+---
+vim_submodules:
+ - name: vim-scripts/Colour-Sampler-Pack
+   folder: ColorSamplerPack
+ - name: docunext/closetag.vim
+   folder: closetag.vim
+ - name: kchmck/vim-coffee-script
+   folder: vim-coffee-script
+ - name: Raimondi/delimitMate
+   folder: delimitmate
+ - name: tpope/vim-fugitive
+   folder: vim-fugitive
+ - name: scrooloose/nerdcommenter
+   folder: nerdcommenter
+ - name: Lokaltog/vim-powerline
+   folder: vim-powerline
+ - name: altercation/vim-colors-solarized
+   folder: vim-colors-solarized
+ - name: vim-scripts/SuperTab
+   folder: SuperTab
+ - name: tpope/vim-cucumber
+   folder: vim-cucumber
+ - name: tpope/vim-haml
+   folder: vim-haml
+ - name: tpope/vim-rails
+   folder: vim-rails
+ - name: vim-ruby/vim-ruby
+   folder: vim-ruby
+ - name: ecomba/vim-ruby-refactoring
+   folder: vim-ruby-refactoring
+ - name: jcfaria/Vim-R-plugin
+   folder: Vim-R-plugin
+ - name: tpope/vim-markdown
+   folder: vim-markdown
+ - name: msanders/cocoa.vim
+   folder: cocoa.vim
+ - name: scrooloose/syntastic
+   folder: syntastic
+ - name: majutsushi/tagbar
+   folder: tagbar
+ - name: mileszs/ack.vim
+   folder: ack.vim
+ - name: pivotal/tmux-config
+   folder: tmux-config
+ - name: nono/vim-handlebars
+   folder: vim-handlebars
+ - name: Lokaltog/vim-easymotion
+   folder: vim-easymotion
+ - name: Lokaltog/vim-easymotion
+   folder: vim-easymotion
+ - name: airblade/vim-gitgutter
+   folder: vim-gitgutter
+ - name: kien/ctrlp.vim
+   folder: ctrlp.vim
+ - name: scrooloose/nerdtree
+   folder: nerdtree
+ - name: digitaltoad/vim-jade
+   folder: vim-jade
+ - name: mileszs/ack.vim
+   folder: ack.vim
+ - name: nono/vim-handlebars
+   folder: vim-handlebars
+ - name: claco/jasmine.vim
+   folder: jasmine.vim
+ - name: jimenezrick/vimerl
+   folder: vimerl
+ - name: elixir-lang/vim-elixir
+   folder: vim-elixir
+ - name: guns/vim-clojure-static
+   folder: vim-clojure-static
+ - name: ingydotnet/yaml-vim
+   folder: yaml-vim
+ - name: derekwyatt/vim-scala
+   folder: vim-scala
+ - name: junegunn/vim-easy-align
+   folder: vim-easy-align
+ - name: tpope/vim-vinegar
+   folder: vim-vinegar

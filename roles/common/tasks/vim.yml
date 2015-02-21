@@ -1,0 +1,22 @@
+---
+- include_vars: vim.yml
+- name: Make sure the autoload directory exsists
+  file:
+    path: "/Users/{{ username }}/.vim/autoload"
+    recurse: true
+    state: directory
+    mode: 0755
+- name: Make sure that bundle directory exsists
+  file:
+    path: "/Users/{{ username }}/.vim/bundle"
+    recurse: true
+    state: directory
+    mode: 0755
+- name: Add pathogen to the repo
+  get_url: url=https://raw.githubusercontent.com/tpope/vim-pathogen/master/autoload/pathogen.vim dest="/Users/{{ username }}/.vim/autoload/pathogen.vim"
+- name: Ensure dotfiles repository is cloned locally.
+  git:
+    repo: "https://github.com/{{ item.name }}.git"
+    dest: "/Users/{{ username}}/.vim/bundle/{{ item.folder }}"
+  sudo: no
+  with_items: vim_submodules

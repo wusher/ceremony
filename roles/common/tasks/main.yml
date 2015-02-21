@@ -1,0 +1,6 @@
+---
+  - include: preconditions.yml
+  - include: dotfiles.yml
+  - include: homebrew.yml
+  - include: zsh.yml
+  - include: vim.yml

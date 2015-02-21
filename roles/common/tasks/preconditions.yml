@@ -1,0 +1,6 @@
+---
+- name: Make sure that the setup directory exsists
+  file:
+    path: "/Users/{{ username }}/setup"
+    state: directory
+    mode: 0755

@@ -1,0 +1,49 @@
+---
+downloads: ~/.ansible-downloads/
+homebrew_installed_packages:
+  - zsh
+  - ack
+  - docker
+  - boot2docker
+  - go
+  - nvm
+  - rbenv
+  - ruby-build
+  - tmux
+  - tree
+  - watch
+  - macvim
+  - sqlite
+  - reattach-to-user-namespace
+  - hr
+  - git
+  - ansible
+  - fig
+
+homebrew_taps:
+  - caskroom/cask
+
+homebrew_cask_appdir: /Applications
+homebrew_cask_apps:
+  - alfred             
+  - dash               
+  - fluid              
+  - iterm2             
+  - nvalt              
+  - sequel-pro         
+  - slack              
+  - vlc
+  - evernote
+  - flux
+  - skitch
+  - 1password
+  - amethyst           
+  - disk-inventory-x   
+  - google-chrome      
+  - macpaw-gemini      
+  - rdio               
+  - skype              
+  - virtualbox         
+  - firefox
+  - ynab
+  - macvim

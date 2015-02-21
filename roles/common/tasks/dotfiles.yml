@@ -1,0 +1,13 @@
+---
+- include_vars: dotfiles.yml
+- name: Ensure dotfiles repository is cloned locally.
+  git:
+    repo: "{{dotfile_repo}}"
+    dest: "/Users/{{username}}/.dot_files"
+- name: Ensure dotfiles repository is cloned locally.
+  file:
+    path: "/Users/{{username}}/.{{item}}"
+    src: "/Users/{{username}}/.dot_files/{{item}}"
+    state: link
+  with_items: dotfiles_to_link
+

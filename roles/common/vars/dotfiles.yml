@@ -1,0 +1,8 @@
+---
+dotfile_repo: https://github.com/wusher/dot_files.git
+dotfiles_to_link: 
+  - gemrc
+  - gitconfig
+  - tmux.conf
+  - vimrc 
+  - zshrc

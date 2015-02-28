@@ -1,12 +1,12 @@
 ---
 - include_vars: vim.yml
-- name: Make sure the autoload directory exsists
+- name: Make sure the autoload directory exists
   file:
     path: "/Users/{{ username }}/.vim/autoload"
     recurse: true
     state: directory
     mode: 0755
-- name: Make sure that bundle directory exsists
+- name: Make sure that bundle directory exists
   file:
     path: "/Users/{{ username }}/.vim/bundle"
     recurse: true
@@ -18,6 +18,5 @@
   git:
     repo: "https://github.com/{{ item.name }}.git"
     dest: "/Users/{{ username}}/.vim/bundle/{{ item.folder }}"
-    version: master
   sudo: no
   with_items: vim_submodules

@@ -38,12 +38,16 @@ vim_submodules:
    name: claco/jasmine.vim
  - folder: markdown
    name: tpope/vim-markdown
+ - folder: nginx
+   name: vim-scripts/nginx.vim
  - folder: nerdcommenter
    name: scrooloose/nerdcommenter
  - folder: nerdtree
    name: scrooloose/nerdtree
  - folder: powerline
    name: Lokaltog/vim-powerline
+ - folder: puppet
+   name: rodjek/vim-puppet
  - folder: r
    name: jcfaria/Vim-R-plugin
  - folder: rails

@@ -15,5 +15,6 @@
     path: "/Users/{{username}}/{{item.dest}}"
     src: "/Users/{{username}}/.dot_files/{{item.src}}"
     state: link
+  ignore_errors: true
   with_items: misc_config_files
 

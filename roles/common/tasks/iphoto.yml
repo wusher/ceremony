@@ -1,0 +1,6 @@
+---
+- name: SymLink iPhoto library
+  file:
+    path: "{{home_dir}}/Pictures/iPhoto Library.photolibrary"
+    src: "{{home_dir}}/Dropbox/iPhotoLibrary/iPhoto Library.photolibrary"
+    state: link

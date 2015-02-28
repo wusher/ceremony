@@ -1,7 +1,9 @@
 ---
   - include: preconditions.yml
+  - include: homebrew.yml
   - include: fonts.yml
   - include: dotfiles.yml
-  - include: homebrew.yml
+  - include: dropbox.yml
+  - include: iphoto.yml
   - include: zsh.yml
   - include: vim.yml

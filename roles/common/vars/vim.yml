@@ -4,8 +4,6 @@ vim_submodules:
    name: vim-scripts/Colour-Sampler-Pack
  - folder: ack
    name: mileszs/ack.vim
- - folder: handlebars
-   name: nono/vim-handlebars
  - folder: clojure-static
    name: guns/vim-clojure-static
  - folder: closetag
@@ -30,6 +28,10 @@ vim_submodules:
    name: tpope/vim-fugitive
  - folder: gitgutter
    name: airblade/vim-gitgutter
+ - folder: go
+   name: fatih/vim-go
+ - folder: handlebars
+   name: nono/vim-handlebars
  - folder: haml
    name: tpope/vim-haml
  - folder: jade
@@ -44,6 +46,8 @@ vim_submodules:
    name: scrooloose/nerdcommenter
  - folder: nerdtree
    name: scrooloose/nerdtree
+ - folder: pencil
+   name: reedes/vim-pencil
  - folder: powerline
    name: Lokaltog/vim-powerline
  - folder: puppet
@@ -64,6 +68,10 @@ vim_submodules:
    name: pivotal/tmux-config
  - folder: vimerl
    name: jimenezrick/vimerl
+ - folder: vimroom
+   name: mikewest/vimroom
+ - folder: wordy
+   name: reedes/vim-wordy
  - folder: yaml
    name: ingydotnet/yaml-vim
 old_vim_submodules:

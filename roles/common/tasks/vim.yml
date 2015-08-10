@@ -2,21 +2,21 @@
 - include_vars: vim.yml
 - name: Make sure the autoload directory exists
   file:
-    path: "/Users/{{ username }}/.vim/autoload"
+    path: "/{{ username }}/.vim/autoload"
     recurse: true
     state: directory
     mode: 0755
 - name: Make sure that bundle directory exists
   file:
-    path: "/Users/{{ username }}/.vim/bundle"
+    path: "/{{ username }}/.vim/bundle"
     recurse: true
     state: directory
     mode: 0755
 - name: Add pathogen to the repo
-  get_url: url=https://raw.githubusercontent.com/tpope/vim-pathogen/master/autoload/pathogen.vim dest="/Users/{{ username }}/.vim/autoload/pathogen.vim"
+  get_url: url=https://raw.githubusercontent.com/tpope/vim-pathogen/master/autoload/pathogen.vim dest="/{{ username }}/.vim/autoload/pathogen.vim" validate_certs=no
 - name: Ensure vim plug-ins are installed.
   git:
     repo: "https://github.com/{{ item.name }}.git"
-    dest: "/Users/{{ username}}/.vim/bundle/{{ item.folder }}"
+    dest: "/{{ username}}/.vim/bundle/{{ item.folder }}"
   sudo: no
   with_items: vim_submodules

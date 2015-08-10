@@ -1,5 +1,5 @@
 ---
-username: maudite
+username: root
 github_username: wusher
-home_dir: "/Users/{{username}}"
+home_dir: "/{username}}"
 staging_dir: "{{home_dir}}/.staging_tmp"

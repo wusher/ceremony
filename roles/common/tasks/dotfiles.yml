@@ -3,18 +3,11 @@
 - name: Ensure dotfiles repository is cloned locally.
   git:
     repo: "{{dotfile_repo}}"
-    dest: "/Users/{{username}}/.dot_files"
+    dest: "/{{username}}/.dot_files"
 - name: Ensure dotfiles repository is cloned locally.
   file:
-    path: "/Users/{{username}}/.{{item}}"
-    src: "/Users/{{username}}/.dot_files/{{item}}"
+    path: "/{{username}}/.{{item}}"
+    src: "/{{username}}/.dot_files/{{item}}"
     state: link
   with_items: dotfiles_to_link
-- name: Misc Files
-  file: 
-    path: "/Users/{{username}}/{{item.dest}}"
-    src: "/Users/{{username}}/.dot_files/{{item.src}}"
-    state: link
-  ignore_errors: true
-  with_items: misc_config_files
 

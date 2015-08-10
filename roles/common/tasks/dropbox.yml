@@ -4,11 +4,3 @@
     path: "{{home_dir}}/Dropbox"
     state: directory
     mode: 0755
-  file:
-    path: "{{home_dir}}/Dropbox/iPhotoLibrary"
-    state: directory
-    mode: 0755
-  file:
-    path: "{{home_dir}}/Dropbox/iPhotoLibrary/iPhoto Library.photolibrary"
-    state: directory
-    mode: 0755
